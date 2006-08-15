@@ -1,0 +1,33 @@
+diff -urN aaa/Net-DBus-0.33.3/DBus.xs Net-DBus-0.33.3/DBus.xs
+--- aaa/Net-DBus-0.33.3/DBus.xs	2006-07-06 00:34:37.000000000 +0200
++++ Net-DBus-0.33.3/DBus.xs	2006-08-15 18:49:16.381279000 +0200
+@@ -477,7 +477,7 @@
+ 	dbus_connection_set_data(con, connection_data_slot, owner, _object_release);
+ 
+ void
+-dbus_connection_disconnect(con)
++dbus_connection_close(con)
+ 	DBusConnection *con;
+ 
+ int
+@@ -706,7 +706,7 @@
+ 	DBusConnection *con;
+    CODE:
+ 	PD_DEBUG("Destroying connection %p\n", con);
+-	dbus_connection_disconnect(con);
++	dbus_connection_close(con);
+ 	// XXX do we need this or not ?
+ 	//dbus_connection_unref(con);
+ 
+diff -urN aaa/Net-DBus-0.33.3/lib/Net/DBus/Binding/Connection.pm Net-DBus-0.33.3/lib/Net/DBus/Binding/Connection.pm
+--- aaa/Net-DBus-0.33.3/lib/Net/DBus/Binding/Connection.pm	2006-07-06 00:47:10.000000000 +0200
++++ Net-DBus-0.33.3/lib/Net/DBus/Binding/Connection.pm	2006-08-15 18:49:14.541164000 +0200
+@@ -144,7 +144,7 @@
+ sub disconnect {
+     my $self = shift;
+     
+-    $self->{connection}->dbus_connection_disconnect();
++    $self->{connection}->dbus_connection_close();
+ }
+ 
+ =item $con->flush()
