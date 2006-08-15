@@ -9,12 +9,13 @@ Summary:	Net::ACL - Perl extension for the DBus message system
 Summary(pl):	Net::ACL - Rozszerzenie Perla dla DBusa
 Name:		perl-Net-DBus
 Version:	0.33.3
-Release:	0.1
+Release:	0.2
 # same as perl
 License:	GPL v1+ or Artistic
 Group:		Development/Languages/Perl
 Source0:	http://www.cpan.org/modules/by-module/%{pdir}/%{pdir}-%{pnam}-%{version}.tar.gz
-# Source0-md5:	351d7ef33c2c44ccab2911cef33b8a51
+# Source0-md5:	1663f7d4440fe2756c3dc315a80aeadc
+Patch0:		%{name}-dbus.patch
 BuildRequires:	perl-Time-HiRes
 BuildRequires:	perl-XML-Twig
 BuildRequires:	perl-XML-Parser
@@ -38,6 +39,7 @@ Modu³ Net::DBus dostarcza API Perla XS dla dbusa - demona komunikacji mieêdzy ap
 
 %prep
 %setup -q -n %{pdir}-%{pnam}-%{version}
+%patch0 -p1
 
 %build
 %{__perl} Makefile.PL \
