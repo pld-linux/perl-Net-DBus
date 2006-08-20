@@ -9,7 +9,7 @@ Summary:	Net::ACL - Perl extension for the DBus message system
 Summary(pl):	Net::ACL - Rozszerzenie Perla dla systemu komunikacji DBus
 Name:		perl-Net-DBus
 Version:	0.33.3
-Release:	0.2
+Release:	1
 # same as perl
 License:	GPL v1+ or Artistic
 Group:		Development/Languages/Perl
@@ -57,7 +57,7 @@ rm -rf $RPM_BUILD_ROOT
 	DESTDIR=$RPM_BUILD_ROOT
 
 rm -f $RPM_BUILD_ROOT%{perl_vendorarch}/Net/DBus/*.pod
-rm -r $RPM_BUILD_ROOT%{perl_vendorarch}/Net/DBus/Tutorial
+rm -rf $RPM_BUILD_ROOT%{perl_vendorarch}/Net/DBus/Tutorial
 
 %clean
 rm -rf $RPM_BUILD_ROOT
