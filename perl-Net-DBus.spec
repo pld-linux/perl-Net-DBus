@@ -6,7 +6,7 @@
 %define		pdir	Net
 %define		pnam	DBus
 Summary:	Net::ACL - Perl extension for the DBus message system 
-Summary(pl):	Net::ACL - Rozszerzenie Perla dla systemu komunikacji DBus
+Summary(pl.UTF-8):   Net::ACL - Rozszerzenie Perla dla systemu komunikacji DBus
 Name:		perl-Net-DBus
 Version:	0.33.3
 Release:	1
@@ -32,11 +32,11 @@ APIs, not concerning itself yet with the GLib or Qt wrappers. For more
 information on dbus visit the project website at
 <http://www.freedesktop.org/software/dbus/>.
 
-%description -l pl
-Modu³ Net::DBus dostarcza API Perla XS dla dbusa - systemu komunikacji
-miêdzy aplikacjami. API Perla pokrywa kluczow± funkcjonalno¶æ API
-dbusa, nie k³opocz±c siê jeszcze wrapperami GLiba albo Qt. Wiêcej
-informacji na temat dbusa mo¿na znale¼æ na stronie projektu:
+%description -l pl.UTF-8
+ModuÅ‚ Net::DBus dostarcza API Perla XS dla dbusa - systemu komunikacji
+miÄ™dzy aplikacjami. API Perla pokrywa kluczowÄ… funkcjonalnoÅ›Ä‡ API
+dbusa, nie kÅ‚opoczÄ…c siÄ™ jeszcze wrapperami GLiba albo Qt. WiÄ™cej
+informacji na temat dbusa moÅ¼na znaleÅºÄ‡ na stronie projektu:
 <http://www.freedesktop.org/software/dbus/>.
 
 %prep
