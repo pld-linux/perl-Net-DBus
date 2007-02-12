@@ -6,7 +6,7 @@
 %define		pdir	Net
 %define		pnam	DBus
 Summary:	Net::ACL - Perl extension for the DBus message system 
-Summary(pl.UTF-8):   Net::ACL - Rozszerzenie Perla dla systemu komunikacji DBus
+Summary(pl.UTF-8):	Net::ACL - Rozszerzenie Perla dla systemu komunikacji DBus
 Name:		perl-Net-DBus
 Version:	0.33.3
 Release:	1
