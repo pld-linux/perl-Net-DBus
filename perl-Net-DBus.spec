@@ -5,18 +5,18 @@
 %include	/usr/lib/rpm/macros.perl
 %define		pdir	Net
 %define		pnam	DBus
-Summary:	Net::ACL - Perl extension for the DBus message system 
-Summary(pl.UTF-8):	Net::ACL - Rozszerzenie Perla dla systemu komunikacji DBus
+Summary:	Net::DBus - Perl extension for the DBus message system 
+Summary(pl.UTF-8):	Net::DBus - Rozszerzenie Perla dla systemu komunikacji DBus
 Name:		perl-Net-DBus
-Version:	0.33.5
-Release:	3
+Version:	0.33.6
+Release:	1
 # same as perl
 License:	GPL v1+ or Artistic
 Group:		Development/Languages/Perl
 Source0:	http://www.cpan.org/modules/by-module/Net/%{pdir}-%{pnam}-%{version}.tar.gz
-# Source0-md5:	fac4674945f53509ce8c3249646aaa11
+# Source0-md5:	a1dbce89b1b839fd0e46d74067ae2e35
 URL:		http://search.cpan.org/dist/Net-DBus/
-BuildRequires:	dbus-devel
+BuildRequires:	dbus-devel >= 0.90
 BuildRequires:	perl-Time-HiRes
 BuildRequires:	perl-XML-Parser
 BuildRequires:	perl-XML-Twig
@@ -54,7 +54,7 @@ informacji na temat dbusa można znaleźć na stronie projektu:
 %install
 rm -rf $RPM_BUILD_ROOT
 
-%{__make} install \
+%{__make} pure_install \
 	DESTDIR=$RPM_BUILD_ROOT
 
 rm -f $RPM_BUILD_ROOT%{perl_vendorarch}/Net/DBus/*.pod
