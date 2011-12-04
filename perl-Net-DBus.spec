@@ -10,8 +10,8 @@ Summary(pl.UTF-8):	Net::DBus - Rozszerzenie Perla dla systemu komunikacji DBus
 Name:		perl-Net-DBus
 Version:	1.0.0
 Release:	1
-# same as perl
-License:	GPL v1+ or Artistic
+# "same as perl", but GPL v2+ is specified
+License:	GPL v2+ or Artistic
 Group:		Development/Languages/Perl
 Source0:	http://www.cpan.org/modules/by-module/Net/%{pdir}-%{pnam}-%{version}.tar.gz
 # Source0-md5:	b17e32976d1a3b56feb908ebd7fed7f1
@@ -57,8 +57,8 @@ rm -rf $RPM_BUILD_ROOT
 %{__make} pure_install \
 	DESTDIR=$RPM_BUILD_ROOT
 
-rm -f $RPM_BUILD_ROOT%{perl_vendorarch}/Net/DBus/*.pod
-rm -rf $RPM_BUILD_ROOT%{perl_vendorarch}/Net/DBus/Tutorial
+%{__rm} $RPM_BUILD_ROOT%{perl_vendorarch}/Net/DBus/*.pod
+%{__rm} -r $RPM_BUILD_ROOT%{perl_vendorarch}/Net/DBus/Tutorial
 
 %clean
 rm -rf $RPM_BUILD_ROOT
@@ -78,4 +78,4 @@ rm -rf $RPM_BUILD_ROOT
 %dir %{perl_vendorarch}/auto/Net/DBus
 %{perl_vendorarch}/auto/Net/DBus/DBus.bs
 %attr(755,root,root) %{perl_vendorarch}/auto/Net/DBus/DBus.so
-%{_mandir}/man3/*
+%{_mandir}/man3/Net::DBus*.3pm*
