@@ -76,6 +76,5 @@ rm -rf $RPM_BUILD_ROOT
 %dir %{perl_vendorarch}/Net/DBus/Test
 %{perl_vendorarch}/Net/DBus/Test/*.pm
 %dir %{perl_vendorarch}/auto/Net/DBus
-%{perl_vendorarch}/auto/Net/DBus/DBus.bs
 %attr(755,root,root) %{perl_vendorarch}/auto/Net/DBus/DBus.so
 %{_mandir}/man3/Net::DBus*.3pm*
