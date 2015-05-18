@@ -16,13 +16,19 @@ Group:		Development/Languages/Perl
 Source0:	http://www.cpan.org/modules/by-module/Net/%{pdir}-%{pnam}-%{version}.tar.gz
 # Source0-md5:	da44a16f8abf1db76f5ccf50d9926944
 URL:		http://search.cpan.org/dist/Net-DBus/
-BuildRequires:	dbus-devel >= 0.90
+BuildRequires:	dbus-devel >= 1.3.0
 BuildRequires:	perl-Time-HiRes
-BuildRequires:	perl-XML-Parser
 BuildRequires:	perl-XML-Twig
 BuildRequires:	perl-devel >= 1:5.8.0
+%if %{with tests}
+BuildRequires:	perl(Test::CPAN::Changes)
+BuildRequires:	perl-Test-Pod
+BuildRequires:	perl-Test-Pod-Coverage
+BuildRequires:	perl-Test-Simple
+%endif
 BuildRequires:	pkgconfig
 BuildRequires:	rpm-perlprov >= 4.1-13
+Requires:	dbus-libs >= 1.3.0
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
