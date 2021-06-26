@@ -7,14 +7,14 @@
 Summary:	Net::DBus - Perl extension for the DBus message system 
 Summary(pl.UTF-8):	Net::DBus - Rozszerzenie Perla dla systemu komunikacji DBus
 Name:		perl-Net-DBus
-Version:	1.1.0
-Release:	8
+Version:	1.2.0
+Release:	1
 # "same as perl", but GPL v2+ is specified
 License:	GPL v2+ or Artistic
 Group:		Development/Languages/Perl
 Source0:	http://www.cpan.org/modules/by-module/Net/%{pdir}-%{pnam}-%{version}.tar.gz
-# Source0-md5:	da44a16f8abf1db76f5ccf50d9926944
-URL:		http://search.cpan.org/dist/Net-DBus/
+# Source0-md5:	a260e9ae037981a3519ffd5f2e9f2906
+URL:		https://metacpan.org/dist/Net-DBus
 BuildRequires:	dbus-devel >= 1.3.0
 BuildRequires:	perl-Time-HiRes
 BuildRequires:	perl-XML-Twig
@@ -27,6 +27,7 @@ BuildRequires:	perl-Test-Simple
 %endif
 BuildRequires:	pkgconfig
 BuildRequires:	rpm-perlprov >= 4.1-13
+BuildRequires:	rpmbuild(macros) >= 1.745
 Requires:	dbus-libs >= 1.3.0
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
