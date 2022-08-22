@@ -8,7 +8,7 @@ Summary:	Net::DBus - Perl extension for the DBus message system
 Summary(pl.UTF-8):	Net::DBus - Rozszerzenie Perla dla systemu komunikacji DBus
 Name:		perl-Net-DBus
 Version:	1.2.0
-Release:	2
+Release:	3
 # "same as perl", but GPL v2+ is specified
 License:	GPL v2+ or Artistic
 Group:		Development/Languages/Perl
